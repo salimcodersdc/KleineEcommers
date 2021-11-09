@@ -42,6 +42,12 @@
 		CA3C7168273A65350089DA5A /* UnAuthChoiceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7167273A65350089DA5A /* UnAuthChoiceScreen.swift */; };
 		CA3C716C273A656D0089DA5A /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C716B273A656D0089DA5A /* LoginScreen.swift */; };
 		CA3C7170273A65790089DA5A /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C716F273A65790089DA5A /* RegisterScreen.swift */; };
+		CA3C7175273A6D6D0089DA5A /* MobileBackgroundLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7174273A6D6D0089DA5A /* MobileBackgroundLayer.swift */; };
+		CA3C7178273A741B0089DA5A /* PartialMobileBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7177273A741B0089DA5A /* PartialMobileBackground.swift */; };
+		CA3C717B273A78C30089DA5A /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C717A273A78C30089DA5A /* LogoView.swift */; };
+		CA3C7181273A86740089DA5A /* LoginViewModelServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7180273A86740089DA5A /* LoginViewModelServiceProtocol.swift */; };
+		CA3C7185273A86920089DA5A /* LoginViewModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7184273A86920089DA5A /* LoginViewModelService.swift */; };
+		CA3C7188273A86F40089DA5A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7187273A86F40089DA5A /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +88,12 @@
 		CA3C7167273A65350089DA5A /* UnAuthChoiceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnAuthChoiceScreen.swift; sourceTree = "<group>"; };
 		CA3C716B273A656D0089DA5A /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		CA3C716F273A65790089DA5A /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		CA3C7174273A6D6D0089DA5A /* MobileBackgroundLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileBackgroundLayer.swift; sourceTree = "<group>"; };
+		CA3C7177273A741B0089DA5A /* PartialMobileBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialMobileBackground.swift; sourceTree = "<group>"; };
+		CA3C717A273A78C30089DA5A /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		CA3C7180273A86740089DA5A /* LoginViewModelServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelServiceProtocol.swift; sourceTree = "<group>"; };
+		CA3C7184273A86920089DA5A /* LoginViewModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelService.swift; sourceTree = "<group>"; };
+		CA3C7187273A86F40089DA5A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +284,9 @@
 		CA3C7122273A5CB00089DA5A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CA3C7174273A6D6D0089DA5A /* MobileBackgroundLayer.swift */,
+				CA3C717A273A78C30089DA5A /* LogoView.swift */,
+				CA3C7177273A741B0089DA5A /* PartialMobileBackground.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +316,9 @@
 		CA3C7165273A65140089DA5A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				CA3C717F273A86610089DA5A /* Protocol */,
+				CA3C717E273A865C0089DA5A /* Service */,
+				CA3C717D273A86510089DA5A /* ViewModel */,
 				CA3C716B273A656D0089DA5A /* LoginScreen.swift */,
 			);
 			path = Login;
@@ -312,6 +330,30 @@
 				CA3C716F273A65790089DA5A /* RegisterScreen.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		CA3C717D273A86510089DA5A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C7187273A86F40089DA5A /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA3C717E273A865C0089DA5A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C7184273A86920089DA5A /* LoginViewModelService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CA3C717F273A86610089DA5A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C7180273A86740089DA5A /* LoginViewModelServiceProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +432,8 @@
 				CA3C712D273A5DA90089DA5A /* FogShape.swift in Sources */,
 				CA3C70DF273A599E0089DA5A /* ContentView.swift in Sources */,
 				CA3C711E273A5A7E0089DA5A /* AuthManager.swift in Sources */,
+				CA3C7175273A6D6D0089DA5A /* MobileBackgroundLayer.swift in Sources */,
+				CA3C7181273A86740089DA5A /* LoginViewModelServiceProtocol.swift in Sources */,
 				CA3C7110273A5A7E0089DA5A /* Color+Extension.swift in Sources */,
 				CA3C7117273A5A7E0089DA5A /* CustomNavigationViewPrefrenceKeys.swift in Sources */,
 				CA3C7112273A5A7E0089DA5A /* TestLoadingView.swift in Sources */,
@@ -398,6 +442,7 @@
 				CA3C7168273A65350089DA5A /* UnAuthChoiceScreen.swift in Sources */,
 				CA3C7126273A5CF80089DA5A /* KelinePartLogoShape.swift in Sources */,
 				CA3C711D273A5A7E0089DA5A /* ScreenCoordinator.swift in Sources */,
+				CA3C7188273A86F40089DA5A /* LoginViewModel.swift in Sources */,
 				CA3C7119273A5A7E0089DA5A /* LoadingView.swift in Sources */,
 				CA3C7125273A5CF80089DA5A /* KelineMobile.swift in Sources */,
 				CA3C710F273A5A7E0089DA5A /* Double+Extension.swift in Sources */,
@@ -407,11 +452,14 @@
 				CA3C7113273A5A7E0089DA5A /* CustomNavigationLink.swift in Sources */,
 				CA3C7116273A5A7E0089DA5A /* CustomNavigationView.swift in Sources */,
 				CA3C7118273A5A7E0089DA5A /* CustomNavBarView.swift in Sources */,
+				CA3C717B273A78C30089DA5A /* LogoView.swift in Sources */,
 				CA3C7129273A5D4B0089DA5A /* WelcomeScreen.swift in Sources */,
+				CA3C7185273A86920089DA5A /* LoginViewModelService.swift in Sources */,
 				CA3C70DD273A599E0089DA5A /* KleineEcommersApp.swift in Sources */,
 				CA3C7115273A5A7E0089DA5A /* AppNavBarView.swift in Sources */,
 				CA3C7114273A5A7E0089DA5A /* CustomNavBarContainerView.swift in Sources */,
 				CA3C7111273A5A7E0089DA5A /* Font+Extension.swift in Sources */,
+				CA3C7178273A741B0089DA5A /* PartialMobileBackground.swift in Sources */,
 				CA3C716C273A656D0089DA5A /* LoginScreen.swift in Sources */,
 				CA3C710C273A5A7E0089DA5A /* AppError.swift in Sources */,
 				CA3C7170273A65790089DA5A /* RegisterScreen.swift in Sources */,

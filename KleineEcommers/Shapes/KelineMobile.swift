@@ -221,14 +221,30 @@ struct KelineInnerMobileShape: Shape {
 }
 
 struct KelineMobile: View {
+    
+    var dark: Color = Color.fromHexString("#B0B6FF")
+    var light: Color = Color.fromHexString("#F5F8FA")
+    
     var body: some View {
         ZStack {
             KelineOutterMobileShape()
-                .fill(Color.fromHexString("#B0B6FF"))
+                .fill(dark)
             
             KelineInnerMobileShape()
-                .fill(Color.fromHexString("#F5F8FA"))
+                .fill(light)
             
         }
+    }
+    
+    func darkColor(_ color: Color) -> KelineMobile {
+        var view = self
+        view.dark = color
+        return view
+    }
+    
+    func lightColor(_ color: Color) -> KelineMobile {
+        var view = self
+        view.light = color
+        return view
     }
 }

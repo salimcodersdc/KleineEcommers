@@ -20,29 +20,7 @@ struct WelcomeScreen: View {
                 Color.theme.alternativeBackground
                     .edgesIgnoringSafeArea(.all)
                 
-                VStack {
-                    ZStack {
-                        KelineMobile()
-                            .padding(.top, 32)
-                        
-                        fogEffect
-                        
-                        HStack {
-                            KelinePartLogoShape()
-                                .fill(Color.white)
-                                .frame(width: 30, height: 30)
-                                .offset(y: -15)
-                            
-                            Text("Kleine.")
-                                .font(Font.fontBook.bold(34))
-                                .foregroundColor(.white)
-                        }
-                    }
-                    .frame(width: 300, height: 600)
-                    
-                    Spacer()
-                }
-                .frame(maxWidth: .infinity)
+                MobileBackgroundLayer(showLogo: true)
                 
                 VStack {
                     
@@ -98,27 +76,7 @@ struct WelcomeScreen: View {
     }
 }
 
-extension WelcomeScreen {
-    private var fogEffect: some View {
-        FogShape(diversion: 0)
-            .fill(
-                LinearGradient(
-                    gradient: Gradient(colors: [
-                        Color.clear,
-                        Color.fromHexString("#909BFE"),
-                        Color.blue,
-                        Color.clear
-                    ]),
-                    startPoint: .leading,
-                    endPoint: .trailing
-                )
-            )
-            .frame(width: 150, height: 200)
-            .blur(radius: 20)
-            .opacity(0.4)
-            .offset(y: -50)
-    }
-}
+
 
 struct KelineTestScreen_Previews: PreviewProvider {
     static var previews: some View {
