@@ -34,6 +34,14 @@
 		CA3C7126273A5CF80089DA5A /* KelinePartLogoShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7124273A5CF80089DA5A /* KelinePartLogoShape.swift */; };
 		CA3C7129273A5D4B0089DA5A /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7128273A5D4B0089DA5A /* WelcomeScreen.swift */; };
 		CA3C712D273A5DA90089DA5A /* FogShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C712C273A5DA90089DA5A /* FogShape.swift */; };
+		CA3C7131273A60B40089DA5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3C7130273A60B40089DA5A /* LaunchScreen.storyboard */; };
+		CA3C7153273A62040089DA5A /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA3C7140273A62040089DA5A /* Poppins-Regular.ttf */; };
+		CA3C7155273A62040089DA5A /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA3C7142273A62040089DA5A /* Poppins-Bold.ttf */; };
+		CA3C7158273A62040089DA5A /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA3C7145273A62040089DA5A /* Poppins-SemiBold.ttf */; };
+		CA3C7162273A64460089DA5A /* UnAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7161273A64460089DA5A /* UnAuthController.swift */; };
+		CA3C7168273A65350089DA5A /* UnAuthChoiceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7167273A65350089DA5A /* UnAuthChoiceScreen.swift */; };
+		CA3C716C273A656D0089DA5A /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C716B273A656D0089DA5A /* LoginScreen.swift */; };
+		CA3C7170273A65790089DA5A /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C716F273A65790089DA5A /* RegisterScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +74,14 @@
 		CA3C7124273A5CF80089DA5A /* KelinePartLogoShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KelinePartLogoShape.swift; sourceTree = "<group>"; };
 		CA3C7128273A5D4B0089DA5A /* WelcomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		CA3C712C273A5DA90089DA5A /* FogShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogShape.swift; sourceTree = "<group>"; };
+		CA3C7130273A60B40089DA5A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA3C7140273A62040089DA5A /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		CA3C7142273A62040089DA5A /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		CA3C7145273A62040089DA5A /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		CA3C7161273A64460089DA5A /* UnAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnAuthController.swift; sourceTree = "<group>"; };
+		CA3C7167273A65350089DA5A /* UnAuthChoiceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnAuthChoiceScreen.swift; sourceTree = "<group>"; };
+		CA3C716B273A656D0089DA5A /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		CA3C716F273A65790089DA5A /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +137,10 @@
 		CA3C70EC273A59AA0089DA5A /* Resourse */ = {
 			isa = PBXGroup;
 			children = (
+				CA3C7134273A62040089DA5A /* Poppins */,
 				CA3C70E0273A59A00089DA5A /* Assets.xcassets */,
 				CA3C70DC273A599E0089DA5A /* KleineEcommersApp.swift */,
+				CA3C7130273A60B40089DA5A /* LaunchScreen.storyboard */,
 			);
 			path = Resourse;
 			sourceTree = "<group>";
@@ -130,6 +148,7 @@
 		CA3C70ED273A59C10089DA5A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CA3C7160273A641C0089DA5A /* UnAuth */,
 				CA3C70EE273A59D00089DA5A /* Prelaunch */,
 			);
 			path = Screens;
@@ -138,7 +157,6 @@
 		CA3C70EE273A59D00089DA5A /* Prelaunch */ = {
 			isa = PBXGroup;
 			children = (
-				CA3C7128273A5D4B0089DA5A /* WelcomeScreen.swift */,
 				CA3C70DE273A599E0089DA5A /* ContentView.swift */,
 			);
 			path = Prelaunch;
@@ -258,6 +276,44 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CA3C7134273A62040089DA5A /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C7140273A62040089DA5A /* Poppins-Regular.ttf */,
+				CA3C7142273A62040089DA5A /* Poppins-Bold.ttf */,
+				CA3C7145273A62040089DA5A /* Poppins-SemiBold.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+		CA3C7160273A641C0089DA5A /* UnAuth */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C7166273A651A0089DA5A /* Register */,
+				CA3C7165273A65140089DA5A /* Login */,
+				CA3C7128273A5D4B0089DA5A /* WelcomeScreen.swift */,
+				CA3C7167273A65350089DA5A /* UnAuthChoiceScreen.swift */,
+				CA3C7161273A64460089DA5A /* UnAuthController.swift */,
+			);
+			path = UnAuth;
+			sourceTree = "<group>";
+		};
+		CA3C7165273A65140089DA5A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C716B273A656D0089DA5A /* LoginScreen.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CA3C7166273A651A0089DA5A /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C716F273A65790089DA5A /* RegisterScreen.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,6 +371,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA3C7158273A62040089DA5A /* Poppins-SemiBold.ttf in Resources */,
+				CA3C7131273A60B40089DA5A /* LaunchScreen.storyboard in Resources */,
+				CA3C7153273A62040089DA5A /* Poppins-Regular.ttf in Resources */,
+				CA3C7155273A62040089DA5A /* Poppins-Bold.ttf in Resources */,
 				CA3C70E4273A59A00089DA5A /* Preview Assets.xcassets in Resources */,
 				CA3C70E1273A59A00089DA5A /* Assets.xcassets in Resources */,
 			);
@@ -335,12 +395,14 @@
 				CA3C7112273A5A7E0089DA5A /* TestLoadingView.swift in Sources */,
 				CA3C711A273A5A7E0089DA5A /* ErrorView.swift in Sources */,
 				CA3C710E273A5A7E0089DA5A /* Bundle+Extension.swift in Sources */,
+				CA3C7168273A65350089DA5A /* UnAuthChoiceScreen.swift in Sources */,
 				CA3C7126273A5CF80089DA5A /* KelinePartLogoShape.swift in Sources */,
 				CA3C711D273A5A7E0089DA5A /* ScreenCoordinator.swift in Sources */,
 				CA3C7119273A5A7E0089DA5A /* LoadingView.swift in Sources */,
 				CA3C7125273A5CF80089DA5A /* KelineMobile.swift in Sources */,
 				CA3C710F273A5A7E0089DA5A /* Double+Extension.swift in Sources */,
 				CA3C710D273A5A7E0089DA5A /* Date+Extension.swift in Sources */,
+				CA3C7162273A64460089DA5A /* UnAuthController.swift in Sources */,
 				CA3C711C273A5A7E0089DA5A /* CombineHttpManager.swift in Sources */,
 				CA3C7113273A5A7E0089DA5A /* CustomNavigationLink.swift in Sources */,
 				CA3C7116273A5A7E0089DA5A /* CustomNavigationView.swift in Sources */,
@@ -350,7 +412,9 @@
 				CA3C7115273A5A7E0089DA5A /* AppNavBarView.swift in Sources */,
 				CA3C7114273A5A7E0089DA5A /* CustomNavBarContainerView.swift in Sources */,
 				CA3C7111273A5A7E0089DA5A /* Font+Extension.swift in Sources */,
+				CA3C716C273A656D0089DA5A /* LoginScreen.swift in Sources */,
 				CA3C710C273A5A7E0089DA5A /* AppError.swift in Sources */,
+				CA3C7170273A65790089DA5A /* RegisterScreen.swift in Sources */,
 				CA3C711B273A5A7E0089DA5A /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

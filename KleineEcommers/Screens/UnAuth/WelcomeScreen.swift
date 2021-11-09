@@ -10,11 +10,14 @@ import SwiftUI
 // #000DAE
 
 struct WelcomeScreen: View {
+    
+    @Binding var page: UnAuthController.Page
+    
     var body: some View {
         GeometryReader { proxy in
             ZStack(alignment: .bottom) {
                 
-                Color.fromHexString("#849DFE")
+                Color.theme.alternativeBackground
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
@@ -31,7 +34,7 @@ struct WelcomeScreen: View {
                                 .offset(y: -15)
                             
                             Text("Kleine.")
-                                .font(Font.book.bold(24))
+                                .font(Font.fontBook.bold(34))
                                 .foregroundColor(.white)
                         }
                     }
@@ -44,38 +47,41 @@ struct WelcomeScreen: View {
                 VStack {
                     
                     HStack {
-                        Capsule()
-                            .fill(Color.fromHexString("#849DFE"))
+                        Capsule() // 849DFE
+                            .fill(Color.theme.alternativeBackground)
                             .frame(width: 75, height: 5)
                         Capsule()
-                            .fill(Color.fromHexString("#849DFE").opacity(0.5))
+                            .fill(Color.theme.alternativeBackground.opacity(0.5))
                             .frame(width: 50, height: 5)
                         Capsule()
-                            .fill(Color.fromHexString("#849DFE").opacity(0.5))
+                            .fill(Color.theme.alternativeBackground.opacity(0.5))
                             .frame(width: 50, height: 5)
                     }
                     .padding(.bottom, 16)
                     .padding(.top, 32)
                     
                     Text("The Right Address For\nShopping Anyday")
-                        .font(Font.book.bold(28))
+                        .font(Font.fontBook.bold(28))
+                        .foregroundColor(Color.theme.primaryText)
                         .multilineTextAlignment(.center)
                     
                     Text("It is now very easy to reach the best quality\namong all the products on the internet!")
-                        .font(Font.book.regular(12))
-                        .foregroundColor(Color.fromHexString("#979797"))
+                        .font(Font.fontBook.regular(12))
+                        .foregroundColor(Color.theme.alternativeText)
                         .multilineTextAlignment(.center)
                         .padding(.vertical)
                     
-                    Button(action: {}, label: {
+                    Button(action: {
+                        page = .choice
+                    }, label: {
                         Text("Next")
-                            .font(Font.book.semiBold(12))
-                            .foregroundColor(Color.fromHexString("#000DAE"))
+                            .font(Font.fontBook.semiBold(12))
+                            .foregroundColor(Color.theme.primary)
                             .padding(.vertical, 8)
                             .padding(.horizontal, 32)
                             .background(
                                 RoundedRectangle(cornerRadius: 8)
-                                    .stroke(Color.fromHexString("#000DAE"))
+                                    .stroke(Color.theme.primary)
                             )
                     })
                     Spacer()
@@ -116,6 +122,6 @@ extension WelcomeScreen {
 
 struct KelineTestScreen_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeScreen()
+        WelcomeScreen(page: .constant(.welcome))
     }
 }

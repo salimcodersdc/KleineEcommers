@@ -9,34 +9,20 @@ import SwiftUI
 
 extension Font {
     
-    static var book = FontsBook()
+    static var fontBook = FontsBook()
     
-//    static func appRegular(size: CGFloat) -> Font {
-//        Font.custom("Cairo-Regular", size: size)
-//    }
-//
-//    static func appSemiBold(size: CGFloat) -> Font {
-//        Font.custom("Cairo-SemiBold", size: size)
-//    }
-//
-//    static func appBold(size: CGFloat) -> Font {
-//        Font.custom("Cairo-Bold", size: size)
-//    }
 }
 
 struct FontsBook {
     func regular(_ size: CGFloat = 16) -> Font {
-//        Font.custom("Cairo-Regular", size: size)
-        Font.system(size: size, weight: .regular)
+        Font.custom("Poppins-Regular", size: size)
     }
     
     func semiBold(_ size: CGFloat = 16) -> Font {
-//        Font.custom("Cairo-SemiBold", size: size)
-        Font.system(size: size, weight: .semibold)
+        Font.custom("Poppins-SemiBold", size: size)
     }
     
     func bold(_ size: CGFloat = 16) -> Font {
-//        Font.custom("Cairo-Bold", size: size)
-        Font.system(size: size, weight: .bold)
+        Font.custom("Poppins-Bold", size: size)
     }
 }
