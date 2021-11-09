@@ -119,8 +119,7 @@ class CombineHttpManager {
                 .eraseToAnyPublisher()
         }
         
-        var request = URLRequest(url: url)
-        request.addValue(Constants.horsesApiAuthorization, forHTTPHeaderField: "Authorization")
+        let request = URLRequest(url: url)
         
         return handleResponse(decodingType: decodingType, errorType: errorType, request: request)
     }

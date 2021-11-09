@@ -10,8 +10,6 @@ import SwiftUI
 extension Color {
     
     static var theme = Palette(name: "Main")
-    static var tasksTheme = Theme()
-    static var facebookTheme = FacebookTheme()
     
     static func rgb(red: Double, green: Double, blue: Double, opacity: Double = 1) -> Color {
         return Color(red: red / 255, green: green / 255, blue: blue / 255, opacity: opacity)
@@ -97,82 +95,4 @@ extension Color {
     }
 
     static let palette = Palette(name: "main")
-}
-
-
-struct Theme {
-    var mainBackground: Color {
-        Color("background-main")
-    }
-
-    var midBackground: Color {
-        Color("background-mid")
-    }
-
-    var alternativeBackground: Color {
-        Color("background-alt")
-    }
-
-    var primaryText: Color {
-        Color.fromHexString("#223E6D")
-    }
-
-    var alternativeText: Color {
-        Color.fromHexString("#92A5C6")
-    }
-
-    var primary: Color {
-        Color("primary")
-    }
-
-    var secondary: Color {
-        Color("secondary")
-    }
-
-    var tertiary: Color {
-        Color("tertiary")
-    }
-
-    var quaternary: Color {
-        Color.fromHexString("#ADE6FE")
-    }
-}
-
-
-struct FacebookTheme {
-    var mainBackground: Color {
-        Color("facebookBackground-main")
-    }
-
-    var midBackground: Color {
-        Color("facebookBackground-mid")
-    }
-
-    var alternativeBackground: Color {
-        Color("facebookBackground-alt")
-    }
-
-    var primaryText: Color {
-        Color("facebookText-primary")
-    }
-
-    var alternativeText: Color {
-        Color("facebookText-alt")
-    }
-
-    var primary: Color {
-        Color("facebookPrimary")
-    }
-
-    var secondary: Color {
-        Color("facebookSecondary")
-    }
-
-    var tertiary: Color {
-        Color("facebookTertiary")
-    }
-
-    var quaternary: Color {
-        Color("facebookQuaternary")
-    }
 }

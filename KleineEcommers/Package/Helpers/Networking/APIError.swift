@@ -23,3 +23,10 @@ enum APIError: Error {
         }
     }
 }
+
+
+
+protocol CombineWebManagerGeneralErrorResponse: Decodable {
+    var statusCode: Int { get }
+    var message: String { get }
+}

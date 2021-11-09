@@ -21,7 +21,7 @@ struct ErrorView: View {
                 Text(error.message)
                     .font(.headline)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color.tasksTheme.primaryText)
+                    .foregroundColor(Color.theme.primaryText)
                 
                 Spacer(minLength: 0)
             }
