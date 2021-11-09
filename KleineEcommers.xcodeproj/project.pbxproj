@@ -30,6 +30,10 @@
 		CA3C711C273A5A7E0089DA5A /* CombineHttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7109273A5A7E0089DA5A /* CombineHttpManager.swift */; };
 		CA3C711D273A5A7E0089DA5A /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C710A273A5A7E0089DA5A /* ScreenCoordinator.swift */; };
 		CA3C711E273A5A7E0089DA5A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C710B273A5A7E0089DA5A /* AuthManager.swift */; };
+		CA3C7125273A5CF80089DA5A /* KelineMobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7123273A5CF80089DA5A /* KelineMobile.swift */; };
+		CA3C7126273A5CF80089DA5A /* KelinePartLogoShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7124273A5CF80089DA5A /* KelinePartLogoShape.swift */; };
+		CA3C7129273A5D4B0089DA5A /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C7128273A5D4B0089DA5A /* WelcomeScreen.swift */; };
+		CA3C712D273A5DA90089DA5A /* FogShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3C712C273A5DA90089DA5A /* FogShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 		CA3C7109273A5A7E0089DA5A /* CombineHttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombineHttpManager.swift; sourceTree = "<group>"; };
 		CA3C710A273A5A7E0089DA5A /* ScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenCoordinator.swift; sourceTree = "<group>"; };
 		CA3C710B273A5A7E0089DA5A /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		CA3C7123273A5CF80089DA5A /* KelineMobile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KelineMobile.swift; sourceTree = "<group>"; };
+		CA3C7124273A5CF80089DA5A /* KelinePartLogoShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KelinePartLogoShape.swift; sourceTree = "<group>"; };
+		CA3C7128273A5D4B0089DA5A /* WelcomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+		CA3C712C273A5DA90089DA5A /* FogShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +98,12 @@
 		CA3C70DB273A599E0089DA5A /* KleineEcommers */ = {
 			isa = PBXGroup;
 			children = (
-				CA3C70F0273A5A7E0089DA5A /* Package */,
-				CA3C70ED273A59C10089DA5A /* Screens */,
 				CA3C70EC273A59AA0089DA5A /* Resourse */,
+				CA3C70F0273A5A7E0089DA5A /* Package */,
+				CA3C7120273A5C9B0089DA5A /* Shapes */,
+				CA3C7121273A5CAA0089DA5A /* Models */,
+				CA3C7122273A5CB00089DA5A /* Views */,
+				CA3C70ED273A59C10089DA5A /* Screens */,
 				CA3C70E5273A59A00089DA5A /* Info.plist */,
 				CA3C70E2273A59A00089DA5A /* Preview Content */,
 			);
@@ -127,6 +138,7 @@
 		CA3C70EE273A59D00089DA5A /* Prelaunch */ = {
 			isa = PBXGroup;
 			children = (
+				CA3C7128273A5D4B0089DA5A /* WelcomeScreen.swift */,
 				CA3C70DE273A599E0089DA5A /* ContentView.swift */,
 			);
 			path = Prelaunch;
@@ -222,6 +234,30 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		CA3C7120273A5C9B0089DA5A /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C7123273A5CF80089DA5A /* KelineMobile.swift */,
+				CA3C7124273A5CF80089DA5A /* KelinePartLogoShape.swift */,
+				CA3C712C273A5DA90089DA5A /* FogShape.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		CA3C7121273A5CAA0089DA5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA3C7122273A5CB00089DA5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA3C712D273A5DA90089DA5A /* FogShape.swift in Sources */,
 				CA3C70DF273A599E0089DA5A /* ContentView.swift in Sources */,
 				CA3C711E273A5A7E0089DA5A /* AuthManager.swift in Sources */,
 				CA3C7110273A5A7E0089DA5A /* Color+Extension.swift in Sources */,
@@ -298,14 +335,17 @@
 				CA3C7112273A5A7E0089DA5A /* TestLoadingView.swift in Sources */,
 				CA3C711A273A5A7E0089DA5A /* ErrorView.swift in Sources */,
 				CA3C710E273A5A7E0089DA5A /* Bundle+Extension.swift in Sources */,
+				CA3C7126273A5CF80089DA5A /* KelinePartLogoShape.swift in Sources */,
 				CA3C711D273A5A7E0089DA5A /* ScreenCoordinator.swift in Sources */,
 				CA3C7119273A5A7E0089DA5A /* LoadingView.swift in Sources */,
+				CA3C7125273A5CF80089DA5A /* KelineMobile.swift in Sources */,
 				CA3C710F273A5A7E0089DA5A /* Double+Extension.swift in Sources */,
 				CA3C710D273A5A7E0089DA5A /* Date+Extension.swift in Sources */,
 				CA3C711C273A5A7E0089DA5A /* CombineHttpManager.swift in Sources */,
 				CA3C7113273A5A7E0089DA5A /* CustomNavigationLink.swift in Sources */,
 				CA3C7116273A5A7E0089DA5A /* CustomNavigationView.swift in Sources */,
 				CA3C7118273A5A7E0089DA5A /* CustomNavBarView.swift in Sources */,
+				CA3C7129273A5D4B0089DA5A /* WelcomeScreen.swift in Sources */,
 				CA3C70DD273A599E0089DA5A /* KleineEcommersApp.swift in Sources */,
 				CA3C7115273A5A7E0089DA5A /* AppNavBarView.swift in Sources */,
 				CA3C7114273A5A7E0089DA5A /* CustomNavBarContainerView.swift in Sources */,
