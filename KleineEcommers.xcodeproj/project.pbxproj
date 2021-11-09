@@ -52,9 +52,8 @@
 		CA3C70DB273A599E0089DA5A /* KleineEcommers */ = {
 			isa = PBXGroup;
 			children = (
-				CA3C70DC273A599E0089DA5A /* KleineEcommersApp.swift */,
-				CA3C70DE273A599E0089DA5A /* ContentView.swift */,
-				CA3C70E0273A59A00089DA5A /* Assets.xcassets */,
+				CA3C70ED273A59C10089DA5A /* Screens */,
+				CA3C70EC273A59AA0089DA5A /* Resourse */,
 				CA3C70E5273A59A00089DA5A /* Info.plist */,
 				CA3C70E2273A59A00089DA5A /* Preview Content */,
 			);
@@ -67,6 +66,31 @@
 				CA3C70E3273A59A00089DA5A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CA3C70EC273A59AA0089DA5A /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C70E0273A59A00089DA5A /* Assets.xcassets */,
+				CA3C70DC273A599E0089DA5A /* KleineEcommersApp.swift */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		CA3C70ED273A59C10089DA5A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C70EE273A59D00089DA5A /* Prelaunch */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CA3C70EE273A59D00089DA5A /* Prelaunch */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C70DE273A599E0089DA5A /* ContentView.swift */,
+			);
+			path = Prelaunch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
