@@ -47,6 +47,11 @@ fileprivate class DateManager {
         return formatter.string(from: date)
     }
     
+    func mediumTime(_ date: Date) -> String {
+        formatter.dateFormat = "hh:mm:ss"
+        return formatter.string(from: date)
+    }
+    
     func dateFormatter() -> DateFormatter {
         return formatter
     }
@@ -101,6 +106,10 @@ extension Date {
     
     var shortTime: String {
         DateManager.shared.shortTime(self)
+    }
+    
+    var mediumTime: String {
+        DateManager.shared.mediumTime(self)
     }
     
     static func dateFormatter() -> DateFormatter {

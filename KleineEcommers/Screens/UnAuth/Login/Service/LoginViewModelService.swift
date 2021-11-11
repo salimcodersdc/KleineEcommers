@@ -10,7 +10,7 @@ import Foundation
 class LoginViewModelService: LoginViewModelServiceProtocol {
     
     func login() {
-        
+        AuthManager.shared.login()
     }
      
 }

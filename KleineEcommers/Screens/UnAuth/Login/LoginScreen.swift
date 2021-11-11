@@ -87,18 +87,31 @@ extension LoginScreen {
     
     private var textFields: some View {
         VStack(alignment: .leading, spacing: 16) {
-            TextField("your user name", text: $viewModel.userName)
+            
+//            if let emailMessage = viewModel.emailValidationMessage {
+//                Text(emailMessage)
+//            }
+            
+            TextField("your user email", text: $viewModel.userName)
                 .textFieldStyle(KleineTextFieldStyle())
+                .border(viewModel.isUserNameValid ? Color.white : Color.red)
+            
+//            if let passwordMessage = viewModel.passwordValidationMessage {
+//                Text(passwordMessage)
+//            }
             
             TextField("Password", text: $viewModel.password)
                 .textFieldStyle(KleineTextFieldStyle())
+                .border(viewModel.isPasswordValid ? Color.white : Color.red)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top, 32)
     }
     
     private var loginButton: some View {
-        Button(action: {}, label: {
+        Button(action: {
+            viewModel.login()
+        }, label: {
             Text("Login")
                 .font(Font.fontBook.semiBold())
                 .foregroundColor(.white)
@@ -111,6 +124,8 @@ extension LoginScreen {
                 )
         })
         .padding(.top, 32)
+        .disabled(!viewModel.isValid)
+        .opacity(viewModel.isValid ? 1 : 0.6)
     }
     
     private var socialLoginButtons: some View {
@@ -163,6 +178,8 @@ struct KleineTextFieldStyle: TextFieldStyle {
                 Rectangle()
                     .fill(Color.white)
             )
+            .autocapitalization(.none)
+            .disableAutocorrection(true)
     }
 }
 
