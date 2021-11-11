@@ -83,28 +83,30 @@ class RegisterViewModel: ObservableObject {
     }
     
     //MARK:- Validation Stuff
-    func evaluateFirstName(_ value: String) -> Bool {
+    private func evaluateFirstName(_ value: String) -> Bool {
         value.count > 5 && Validator.userName.predicate.evaluate(with: value)
     }
     
-    func evaluatePassword(_ value: String) -> Bool {
+    private func evaluatePassword(_ value: String) -> Bool {
         Validator.password.predicate.evaluate(with: value)
     }
     
-    func evaluateEmail(_ value: String) -> Bool {
+    private func evaluateEmail(_ value: String) -> Bool {
         Validator.email.predicate.evaluate(with: value)
     }
     
-    func evaluatePhone(_ value: String) -> Bool {
+    private func evaluatePhone(_ value: String) -> Bool {
         Validator.phone.predicate.evaluate(with: value)
     }
     
-    func evaluateForm(firstNameValid: Published<Bool>.Publisher.Output,
-                      passwordValid: Published<Bool>.Publisher.Output,
-                      emailValid: Published<Bool>.Publisher.Output,
-                      phoneValid: Published<Bool>.Publisher.Output) -> Bool {
+    private func evaluateForm(
+        firstNameValid: Published<Bool>.Publisher.Output,
+        passwordValid: Published<Bool>.Publisher.Output,
+        emailValid: Published<Bool>.Publisher.Output,
+        phoneValid: Published<Bool>.Publisher.Output) -> Bool {
         firstNameValid && passwordValid && emailValid && phoneValid
     }
+    
 }
 struct RegisterScreen: View {
     
