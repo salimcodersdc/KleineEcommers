@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
-
+// Protocol
 protocol HomeViewModelServiceProtocol {
     func fetchData()
 }
 
+// Service
 class HomeViewModelService: HomeViewModelServiceProtocol {
     func fetchData() {
         
@@ -18,6 +19,12 @@ class HomeViewModelService: HomeViewModelServiceProtocol {
     
 }
 
+// Repository
+class HomeViewModelRepository {
+    
+}
+
+// ViewModel
 class HomeViewModel: ObservableObject {
     
     @Published var isLoading: Bool = false
@@ -38,6 +45,7 @@ extension HomeViewModel {
     
 }
 
+// View
 struct HomeScreen: View {
     
     @StateObject private var viewModel: HomeViewModel
@@ -119,10 +127,31 @@ extension HomeScreen {
                 timeLabel
                 
                 bestDeals
+                
+                bestProducts
+                
+                Spacer(minLength: 80)
             }
         }
         .padding(.horizontal)
         .padding(.top)
+    }
+    
+    private var bestProducts: some View {
+        VStack {
+            Text("Best Products")
+                .font(Font.fontBook.regular(22))
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(viewModel.productsList) { product in
+                        BestProductCard(product: product)
+                            .frame(width: 150, height: 200)
+                    }
+                }
+            }
+            
+        }
     }
     
     private var timeLabel: some View {
@@ -141,7 +170,6 @@ extension HomeScreen {
                 HStack {
                     ForEach(viewModel.productsList) { product in
                         BestDealsCard(product: product)
-                            .frame(width: 150, height: 200)
                     }
                 }
             }
@@ -287,6 +315,55 @@ struct BestDealsCard: View {
                 Image(systemName: product.isFavourite ? "heart.fill" : "heart")
                     .font(.headline)
                     .foregroundColor(Color.theme.secondary)
+            }
+            
+            HStack {
+                Text(product.formattedPrice)
+                
+                Spacer(minLength: 0)
+                
+                ZStack {
+                    Text(product.discount)
+                        .foregroundColor(Color.theme.secondary)
+                        .overlay(
+                            Capsule()
+                                .fill(Color.theme.secondary)
+                                .frame(height: 2)
+                        )
+                }
+            }
+            .font(Font.fontBook.regular(11))
+        }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 5, y: 5)
+        )
+        .padding(4)
+    }
+}
+
+struct BestProductCard: View {
+    
+    var product: ProductViewModel
+    
+    var body: some View {
+        VStack {
+            Image(product.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 80)
+            
+            HStack {
+                Text(product.title)
+                    .font(Font.fontBook.regular(15))
+                
+                Spacer(minLength: 0)
+                
+//                Image(systemName: product.isFavourite ? "heart.fill" : "heart")
+//                    .font(.headline)
+//                    .foregroundColor(Color.theme.secondary)
             }
             
             HStack {

@@ -54,5 +54,11 @@
 		<string>Poppins-SemiBold.ttf</string>
 		<string>Poppins-Bold.ttf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow us to use camera to scan QR</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Please allow us to use microphone for voice scan</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Please allow us to help you with voice search</string>
 </dict>
 </plist>

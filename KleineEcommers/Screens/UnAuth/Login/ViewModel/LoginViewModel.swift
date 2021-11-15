@@ -67,11 +67,11 @@ class LoginViewModel: ObservableObject {
     
     //MARK: - Validation Stuff
     private func evaluateEmail(_ value: String) -> Bool {
-        Validator.email.predicate.evaluate(with: value)
+        value.isValidEmail
     }
     
     private func evaluatePassword(_ value: String) -> Bool {
-        Validator.password.predicate.evaluate(with: value)
+        value.isValidComplexPassword
     }
     
     private func evaluateForm(_ userNameValid: Published<Bool>.Publisher.Output, _ passwordValid: Published<Bool>.Publisher.Output) -> Bool {

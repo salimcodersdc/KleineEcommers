@@ -12,15 +12,17 @@ struct ContentView: View {
     @StateObject var authManager = AuthManager.shared
     
     var body: some View {
-        if authManager.isLoggedIn {
-            AuthController()
-                .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .opacity))
-                .animation(.easeIn, value: authManager.isLoggedIn)
-        } else {
-            UnAuthController()
-                .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .opacity))
-                .animation(.easeIn)
-        }
+//        if authManager.isLoggedIn {
+//            AuthController()
+//                .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .opacity))
+//                .animation(.easeIn, value: authManager.isLoggedIn)
+//        } else {
+//            UnAuthController()
+//                .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .opacity))
+//                .animation(.easeIn)
+//        }
+        
+        AuthController()
     }
 }
 

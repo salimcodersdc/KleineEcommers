@@ -16,7 +16,6 @@ class RegisterViewModelService: RegisterViewModelServiceProtocol {
     func register() {
         AuthManager.shared.register()
     }
-    
 }
 
 class RegisterViewModel: ObservableObject {
@@ -84,19 +83,19 @@ class RegisterViewModel: ObservableObject {
     
     //MARK:- Validation Stuff
     private func evaluateFirstName(_ value: String) -> Bool {
-        value.count > 5 && Validator.userName.predicate.evaluate(with: value)
+        value.count > 5 && value.isValidUserName
     }
     
     private func evaluatePassword(_ value: String) -> Bool {
-        Validator.password.predicate.evaluate(with: value)
+        value.isValidSimplePassword
     }
     
     private func evaluateEmail(_ value: String) -> Bool {
-        Validator.email.predicate.evaluate(with: value)
+        value.isValidEmail
     }
     
     private func evaluatePhone(_ value: String) -> Bool {
-        Validator.phone.predicate.evaluate(with: value)
+        value.isValidPhone
     }
     
     private func evaluateForm(
